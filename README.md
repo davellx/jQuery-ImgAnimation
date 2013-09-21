@@ -23,6 +23,7 @@ Example here : http://davel.fr/demo/jQuery-ImgAnimation/
 		- images : array // contains the list of images used for the animation (default : empty array, but you should fill it)
 		- labels : object // contains named labels and the frame associated, usefull fot gotoAndPlay and gotoAndStop (default : empty object)
 		- onAnimationEnterFrame // lauched at every frame while it's played. (default : empty functions)
+		- intervalTime // in miliseconds the interval between two images during animation (default : 25)
 
 4/ control the animation with the animation object
 	animObject.play();
