@@ -5,6 +5,10 @@ A JQuery plugin to ease the creation of animation based on a serie of images
 
 ### Usage
 
+Example here : http://davel.fr/demo/jQuery-ImgAnimation/
+
+### Usage
+
 1/ include jQuery in your code, and my script (yeah, yeah, obvious !)
 
 2/ Add a container that will hold the plugin images
