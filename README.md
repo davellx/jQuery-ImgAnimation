@@ -9,6 +9,8 @@ Example here : http://davel.fr/demo/jQuery-ImgAnimation/
 
 ### Usage
 
+Explanations in French here : http://www.davel.fr/techblog/?p=201
+
 1/ include jQuery in your code, and my script (yeah, yeah, obvious !)
 
 2/ Add a container that will hold the plugin images
