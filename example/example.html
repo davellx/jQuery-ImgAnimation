@@ -21,6 +21,7 @@
   <body>
 	<div class="container">
 		<h1>jQuery-ImgAnimation Example</h1>
+		<div>This examples refers to <a href="https://github.com/davellx/jQuery-ImgAnimation">the jQuery ImgAnimation script that you can find here</a>.</div>
 		<div id="animContainer"></div>
 		
 		<div id="actions">
@@ -29,8 +30,8 @@
 				<button class="btn" onclick="javascript:animObject.stop();">animObject.stop()</button>
 			</div>	
 			<div>	
-			<button class="btn" onclick="javascript:animObject.nextFrame();">animObject.nextFrame()</button>
 			<button class="btn" onclick="javascript:animObject.prevFrame();">animObject.prevFrame()</button>
+			<button class="btn" onclick="javascript:animObject.nextFrame();">animObject.nextFrame()</button>
 			</div>	
 			<div> 
 			<label>Frame Number</label>
@@ -155,7 +156,7 @@
 		<p id="credits">
 		- Images generated width <a href="http://dummyimage.com/">http://dummyimage.com/</a>
 		<br>
-		- Images loading with <a href="">PreloadJS</a>
+		- Images loading with <a href="http://www.createjs.com/#!/PreloadJS">PreloadJS</a>
 		</p>
 	</div>
     <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
@@ -176,9 +177,14 @@
 		$(document).ready(function(){
 			$('#animContainer').html('Chargement...');
 			queue.loadManifest(imagesNamesList,false);
+			queue.addEventListener("fileload", handleFileLoad);
 			queue.addEventListener("complete", handleComplete);
 			queue.load();
 		})
+		
+		function handleFileLoad(e){
+			$('#animContainer').html('Chargement... '+queue._numItemsLoaded+'/'+queue._numItems);
+		}
 		
 		function handleComplete(){
 			for (var i = 1; i <= 100; i++){
