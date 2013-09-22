@@ -14,16 +14,16 @@ Example here : http://davel.fr/demo/jQuery-ImgAnimation/
 2/ Add a container that will hold the plugin images
     <div id="animContainer"></div>
 	
-3/ Load the images (objects) in an array and init the plugin, get the plugins data s an oject to control the animation.
+3/ Load the images (objects) in an array and init the plugin, get the plugins data as an oject to control the animation.
 	$('#animContainer').ImgAnimation({images:imagesObjList});
 	var animObject = $('#animContainer').data('ImgAnimation');
 	
 	the options are : 
 		- loop : boolean // specifies if the animation should start over when the last frame has benne reached (default : true)
 		- images : array // contains the list of images used for the animation (default : empty array, but you should fill it)
-		- labels : object // contains named labels and the frame associated, usefull fot gotoAndPlay and gotoAndStop (default : empty object)
+		- labels : object // contains named labels and the frame associated, usefull for playTo, gotoAndPlay and gotoAndStop (default : empty object)
 		- onAnimationEnterFrame // lauched at every frame while it's played. (default : empty functions)
-		- intervalTime // in miliseconds the interval between two images during animation (default : 25)
+		- intervalTime // in milliseconds the interval between two images during animation (default : 25)
 
 4/ control the animation with the animation object
 	animObject.play();
