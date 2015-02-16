@@ -14,12 +14,14 @@ Explanations in French here : http://www.davel.fr/techblog/?p=201
 1/ include jQuery in your code, and my script (yeah, yeah, obvious !)
 
 2/ Add a container that will hold the plugin images
+```html
     <div id="animContainer"></div>
-	
+```	
 3/ Load the images (objects) in an array and init the plugin, get the plugins data as an oject to control the animation.
+```javascript
 	$('#animContainer').ImgAnimation({images:imagesObjList});
 	var animObject = $('#animContainer').data('ImgAnimation');
-	
+```	
 	the options are : 
 		- loop : boolean // specifies if the animation should start over when the last frame has benne reached (default : true)
 		- images : array // contains the list of images used for the animation (default : empty array, but you should fill it)
@@ -28,6 +30,7 @@ Explanations in French here : http://www.davel.fr/techblog/?p=201
 		- intervalTime // in milliseconds the interval between two images during animation (default : 25)
 
 4/ control the animation with the animation object
+```javascript
 	animObject.play();
 	animObject.stop();
 	animObject.gotoAndStop(num or label);
@@ -36,5 +39,5 @@ Explanations in French here : http://www.davel.fr/techblog/?p=201
 	animObject.prevFrame();
 	animObject.playTo(num or label, callback function);
 	animObject.destroy();
-	
-(if you're familiar with Flash's MovieClips it should be dÈj‡-vu :))
+```	
+(if you're familiar with Flash's MovieClips it should be d√©j√†-vu :))
